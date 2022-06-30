@@ -1,0 +1,50 @@
+/*===================BODY===================*/
+body{
+    overflow-x: hidden;
+}
+
+
+/*===================MENU===================*/
+#menu_barra a{
+    font-size: 20px;
+    color: #3f3f3f;
+}
+
+#ReciRop{
+    font-size: 22px !important;
+    font-weight: bold !important;
+}
+
+/*===================SLIDER===================*/
+.carousel-inner {
+    max-height: 40rem;
+}
+
+/*===================INICIAR SESION===================*/
+
+
+
+/*===================MEDIAQ PANTALLA SMALL===================*/
+@media (max-width:768px) {
+    #intro, #equipo {
+        width: 90% !important;
+    }
+
+    #equipo p{
+        display: none;
+    }
+    .servicio_fila{
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+/*===================MEDIAQ PANTALLA EXTRA SMALL===================*/
+@media(max-width:576px) {
+    .icono_wrap{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+}
+
+

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./pagina.css">
+    <link rel="shortcut icon" href="./imagenes/logoReciRop.jpeg" type="image/x-icon">
+
+  </head>
+  <body> 
+    <header class="container-fluid bg-dark d-flex justify-content-center" >
+        <p class="text-light mb-0 p-0 fs-6"> Contactanos 0800-2345-5007-404</p>
+    </header>
+    <nav class="navbar navbar-expand-lg bg-light p-2" id="menu_barra">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="./index.html" id="ReciRop" >Reci<span class="text-danger">Rop</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./Donar.html">Donar</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./Recibir.html">Recibir</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./Foro.html">Foro</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuario
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./iniciar_sesion.html">Iniciar Sesion</a></li>
+                  <li><a class="dropdown-item" href="./registro.html">Registrarse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Necesitas ayuda?</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+<!--//*===================CHAT===================*//-->
+      <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Chat Guia</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form action="">
+                    <div>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Hola ¿En qué puedo ayudarte?</th>
+                          </tr>
+                        </thead>
+                        <tbody id="chatHelp">
+                        
+                        </tbody>
+                      </table>
+                    </div>
+                    
+                  </form>
+                </div>
+                <div class="input-group mb-3">
+                  <input id="msjHelp" type="text" class="form-control" placeholder="Ingrese un mensaje"  aria-describedby="enviar">
+                  <button class="btn btn-outline-secondary" type="button" id="enviar" onclick="leerMensaje()"><img src="../media/enviar.png" class="img-fluid" width="15" alt=""></button>
+              </div>
+                <div class="modal-footer">
+                  
+                </div>
+              </div>
+            </div>
+      </div>
+
+<!--//*===================ELECCIONES DONAR===================*//-->
+<div class="container col-lg-12 text-center">
+      <h1 class="mt-5">Aquí comienza tu <span class="text-danger">Donación</span></h1>
+</div>
+
+
+ <!--Seccion de para crear una donacion-->
+<div class="container pb-5 pt-5">
+  <p>
+    <a class="btn btn-light btn-outline-danger mx-auto d-block pt-3 pb-3 w-50 fs-5" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      DONAR
+    </a>
+  </p>
+  <div class="collapse pt-5" id="collapseExample">
+    <div class="card card-body" id="pasodos">
+     <h3 class="text-danger">Paso 1</h3>
+     <form action="" class="form" id="donacionLista">
+        <div class="form-group pt-2 pb-2">
+          <h3><span class="h4 form-label text-center ">Elija  el tipo de producto que desea donar</span>
+          </h3>
+          <select class="form-select" name="" id="productoDonar" onchange="progreForm()">
+            <option selected>Elija</option>
+            <option value="ropa"><button type="button">Ropas</button></option>
+            <option value="Material Reciclable">Materiales Reciclables</option>
+            <option value="otro"><button type="button">Otro</button></option>
+          </select>
+        </div>
+        <div id="siOtro">
+
+        </div>
+        <div class="form-group pd-2 pb-2">
+          <h3><span class="h4  form-label text-center">Elija un metodo de Entrega</span></h3>
+          <select class="form-select" name="" id="entrega" onchange="progreEntrega()">
+            <option value="Punto de encuentro">Punto de encuentro</option>
+            <option value="Sucursal">Sucursal</option>
+          </select>
+        </div>
+        
+        <div id="siSucur"></div>
+        <div class="container pt-2">
+          <button type="submit" class="btn btn-danger  mx-auto d-block pt-3 pb-3 w-25" >Listo</button>
+        </div>
+     </form>
+    </div>
+  </div>
+</div>
+
+    <script src="/"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
