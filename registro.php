@@ -10,6 +10,14 @@
 
   </head>
   <body>
+
+  <?php
+include("conexion.php")
+?>
+    
+    <?php
+    include("registrarusuario.php");
+    ?>
     <!--//*===================ENCABEZADO===================*//-->
     <header class="container-fluid bg-dark d-flex justify-content-center" >
       <p class="text-light mb-0 p-0 fs-6"> Contactanos 0800-2345-5007-404</p>
@@ -17,7 +25,7 @@
   <nav class="navbar navbar-expand-lg bg-light p-2" id="menu_barra">
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="./index.html" id="ReciRop">Reci<span class="text-danger">Rop</span></a>
+        <a class="navbar-brand" href="./iniciopagina.php" id="ReciRop">Reci<span class="text-danger">Rop</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,19 +34,19 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="./iniciopagina.php">Inicio</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./Donar.html">Donar</a>
+              <a class="nav-link" href="./Donar.php">Donar</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./Recibir.html">Recibir</a>
+              <a class="nav-link" href="./Recibir.php">Recibir</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./Foro.html">Foro</a>
+              <a class="nav-link" href="./Foro.php">Foro</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -46,8 +54,8 @@
                 Usuario
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="./iniciar_sesion.html">Iniciar Sesion</a></li>
-                <li><a class="dropdown-item" href="./registro.html">Registrarse</a></li>
+                <li><a class="dropdown-item" href="./iniciar_sesion(conexion).php">Iniciar Sesion</a></li>
+                <li><a class="dropdown-item" href="./registro.php">Registrarse</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Necesitas ayuda?</a></li>
               </ul>
@@ -68,7 +76,7 @@
          
        </div>
        <div class="container-fluid col-lg-8 ">
-        <form class="mb-5" action="conexion.php" method="post" id="form1">
+        <form class="mb-5" action="registrarusuario.php" method="POST" id="form1">
           <label for="nombre" class="form-label">Apellido y Nombre</label>
           <input class="form-control" type="text" placeholder="Ingrese aquí su apellido y nombre" name="name" id="nombre">
           <br>
@@ -81,9 +89,7 @@
           <label for="pass" class="form-label">Contraseña</label>
           <input type="password" name="pass" id="pass" class="form-control" placeholder="Ingrese aquí su contraseña">
           <br>
-          <label for="pass" class="form-label">Confirmar Contraseña</label>
-          <input type="password" name="pass2" id="pass2" class="form-control"  placeholder="Confirme su contraseña">
-          <br>
+     
           <button type="submit" name="registro"  class="btn btn-light btn-outline-danger form-control" >Registrarse</button>
         </form>
        </div>
